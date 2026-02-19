@@ -20,6 +20,7 @@ public class PatientController {
         this.patientRepository = patientRepository;
     }
 
+    // kommentar
     @GetMapping("/list")
     public String patients(Model model) {
         model.addAttribute("patients", patientRepository.findAll());
