@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>add new lehrer</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <form th:action="@{/lehrer/add}" th:object="${lehrer}" method="post">
+        <input type="text" th:field="*{name}" class="form-control" placeholder="lehrer name">
+        <input type="text" th:field="*{fach}" class="form-control" placeholder="lehrer fach">
+        birth date <input type="date" th:field="*{birthDate}" class="form-control">
+        <input type="text" th:field="*{email}" class="form-control" placeholder="lehrer email">
+
+        <input type="submit" class="form-control" value="Save">
+    </form>
+</div>
+</body>
+</html>

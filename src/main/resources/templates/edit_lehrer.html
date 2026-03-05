@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lehrer bearbeiten</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+<div class ="container">
+    <h2>Lehrer bearbeiten</h2>
+    <form th:action="@{/lehrer/edit/{id}(id=${lehrer.id})}"
+          th:object="${lehrer}" method="post">
+        <input type="text" th:field="*{name}" class="form-control" placeholder="Name">
+        <input type="text" th:field="*{fach}" class="form-control" placeholder="Art">
+        <input type="text" th:field="*{birthDate}" class="form-control" placeholder="Besitzer">
+        Geburtsdatum: <input type="date" th:field="*{email}" class="form-control">
+        <input type="submit" class="form-control" value="Speichern">
+    </form>
+    <a th:href="@{/lehrer/list}">Zurück zur Liste</a>
+</div>
+</body>
+</html>
