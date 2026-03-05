@@ -52,4 +52,6 @@ public class Lehrer {
     public void setEmail(String email) {
         this.email = email;
     }
+
+    // Konstruktoren, Getter und Setter
 }
